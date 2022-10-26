@@ -7,7 +7,6 @@ const AllCourse = () => {
 
   return (
     <div>
-      <h2>all course</h2>
       <h2>All course: {courseDetails.length}</h2>
     </div>
   );
