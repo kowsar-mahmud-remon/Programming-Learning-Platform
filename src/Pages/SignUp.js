@@ -10,7 +10,7 @@ const SignUp = () => {
         <h2 className='text-center bg-secondary text-light py-2 '>Sign Up</h2>
 
         <Form.Group className="my-3 p-2" controlId="formBasicName">
-          <Form.Label>Your name</Form.Label>
+          <Form.Label>Full name</Form.Label>
           <Form.Control name='name' type="text" placeholder="Enter name" />
         </Form.Group>
 

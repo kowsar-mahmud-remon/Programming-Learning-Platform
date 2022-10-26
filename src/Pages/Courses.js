@@ -1,8 +1,12 @@
 import React from 'react';
 import { Col, Container, Row } from 'react-bootstrap';
+import { Outlet, useLoaderData } from 'react-router-dom';
+import AllCourse from './AllCourse';
 import LeftSide from './Shared/LeftSide';
 
 const Courses = () => {
+  // const courseDetails = useLoaderData();
+  // console.log(courseDetails);
   return (
     <div>
       <Container>
@@ -11,7 +15,7 @@ const Courses = () => {
             <LeftSide></LeftSide>
           </Col>
           <Col lg='9'>
-            <h2>all details</h2>
+            <Outlet></Outlet>
           </Col>
         </Row>
       </Container>
