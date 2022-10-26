@@ -3,11 +3,17 @@ import Button from 'react-bootstrap/Button';
 import Form from 'react-bootstrap/Form';
 import { Link } from 'react-router-dom';
 
-const Login = () => {
+const SignUp = () => {
   return (
     <div className='mt-5'>
       <Form className='w-50 mx-auto border border-2 rounded'>
-        <h2 className='text-center bg-secondary text-light py-2 '>Log In</h2>
+        <h2 className='text-center bg-secondary text-light py-2 '>Sign Up</h2>
+
+        <Form.Group className="my-3 p-2" controlId="formBasicName">
+          <Form.Label>Your name</Form.Label>
+          <Form.Control name='name' type="text" placeholder="Enter name" />
+        </Form.Group>
+
         <Form.Group className="my-3 p-2" controlId="formBasicEmail">
           <Form.Label>Email address</Form.Label>
           <Form.Control name='email' type="email" placeholder="Enter email" />
@@ -17,19 +23,20 @@ const Login = () => {
           <Form.Label>Password</Form.Label>
           <Form.Control name='password' type="password" placeholder="Password" />
         </Form.Group>
-        <Form.Text className="text-muted  p-2">
-          New to Ema-john? Create New Account
+        <Form.Text className="  p-2">
+          We'll never share your email with anyone else.
         </Form.Text>
         <br />
         <Button className='mt-2  p-2 w-100' variant="primary" type="submit">
-          Login
+          SignUp
         </Button>
         <Form.Text className="text-dark">
-          <p className='px-2 pt-1'>New to Ema-john? <Link to='/signup'>Create New Account</Link></p>
+          <p className='px-2 pt-1'>Already have an account? Please <Link to='/login'>Login</Link></p>
         </Form.Text>
+
       </Form>
     </div>
   );
 };
 
-export default Login;
+export default SignUp;
