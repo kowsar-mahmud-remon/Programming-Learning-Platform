@@ -16,7 +16,7 @@ const CourseDetailsCard = ({ courseDetail }) => {
         <Card.Body className='pb-3'>
           <Card.Img style={{ height: '300px' }} variant="top" src={img} />
           <Card.Title className='mt-3'>{title}</Card.Title>
-          <Card.Text>
+          <Card.Text className='pt-2'>
             {
               details.length > 100 ?
                 <p>{details.slice(0, 150) + "..."} <Link to={`/courses/details/${_id}`}>Read More</Link></p>

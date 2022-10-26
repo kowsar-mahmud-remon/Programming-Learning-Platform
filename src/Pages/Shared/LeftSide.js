@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from 'react';
+import { Button } from 'react-bootstrap';
 import { Link } from 'react-router-dom';
 
 const LeftSide = () => {
@@ -14,9 +15,9 @@ const LeftSide = () => {
       <h2>All Courses: {courses.length}</h2>
       <div className="">
         {
-          courses.map(course => <p key={course.id}>
-            <Link to={`course/${course.id}`}>{course.name}</Link>
-          </p>)
+          courses.map(course =>
+            <Link className='text-decoration-none' key={course.id} to={`course/${course.id}`}><Button className='d-block mb-2 fw-bold' variant="outline-success">{course.name}</Button></Link>
+          )
         }
       </div>
     </div>
