@@ -11,10 +11,12 @@ const Courses = () => {
   return (
     <div>
       <h2>course details: {courseDetails.length}</h2>
-      {
-        courseDetails.map(courseDetail => <CourseDetailsCard key={courseDetail._id}
-          courseDetail={courseDetail}></CourseDetailsCard>)
-      }
+      <Row>
+        {
+          courseDetails.map(courseDetail => <CourseDetailsCard key={courseDetail._id}
+            courseDetail={courseDetail}></CourseDetailsCard>)
+        }
+      </Row>
     </div>
   );
 };
