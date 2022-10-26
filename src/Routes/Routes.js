@@ -29,13 +29,14 @@ export const routes = createBrowserRouter([
         element: <Details></Details>
       },
       {
-        path: '/blog',
-        element: <Blog></Blog>
-      },
-      {
         path: '/faq',
         element: <Faq></Faq>
+      },
+      {
+        path: '/blog',
+        element: <Blog></Blog>
       }
+
     ]
   }
 ]);
