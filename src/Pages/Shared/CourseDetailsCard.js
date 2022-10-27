@@ -4,15 +4,24 @@ import Card from 'react-bootstrap/Card';
 import { Link } from 'react-router-dom';
 import { FaStar } from "react-icons/fa";
 import { Col, Row } from 'react-bootstrap';
+import ReactDOM from "react-dom";
+import Pdf from "react-to-pdf";
 
+
+const ref = React.createRef();
 
 const CourseDetailsCard = ({ courseDetail }) => {
   const { _id, name, title, course_price, img, rating, details } = courseDetail;
   console.log(courseDetail);
   return (
-    <Col lg='6'>
+    <Col ref={ref} lg='6'>
       <Card className="mb-5">
-        <Card.Header className='text-center'><h4>{name}</h4></Card.Header>
+        <Card.Header className='text-center d-flex justify-content-between'>
+          <h4>{name}</h4>
+          <Pdf targetRef={ref} filename="course-details.pdf">
+            {({ toPdf }) => <Button onClick={toPdf}>Generate Pdf</Button>}
+          </Pdf>
+        </Card.Header>
         <Card.Body className='pb-3'>
           <Card.Img style={{ height: '250px' }} variant="top" src={img} />
           <Card.Title className='mt-3'>{title}</Card.Title>

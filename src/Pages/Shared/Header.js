@@ -17,7 +17,7 @@ const Header = () => {
       .catch(error => console.error(error));
   };
   return (
-    <div className='mb-4'>
+    <div className=''>
       <Navbar collapseOnSelect expand="lg" bg="dark" variant="dark">
         <Container>
           <Navbar.Brand>

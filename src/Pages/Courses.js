@@ -9,7 +9,7 @@ const Courses = () => {
   const courseDetails = useLoaderData();
   console.log(courseDetails);
   return (
-    <div>
+    <div className='mt-5'>
       <h3 className='text-center mb-4'>ALL Course Details: {courseDetails.length}</h3>
       <Row>
         {

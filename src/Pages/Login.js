@@ -1,4 +1,4 @@
-import { GoogleAuthProvider } from 'firebase/auth';
+import { GithubAuthProvider, GoogleAuthProvider } from 'firebase/auth';
 import React from 'react';
 import { useState } from 'react';
 import { useContext } from 'react';
@@ -10,13 +10,14 @@ import { AuthContext } from '../contexts/AuthProvider';
 
 const Login = () => {
   const [error, setError] = useState('');
-  const { signIn, providerLogin } = useContext(AuthContext);
+  const { signIn, providerLogin, githubLogin } = useContext(AuthContext);
   const navigate = useNavigate();
   const location = useLocation();
 
   const from = location.state?.from?.pathname || '/';
 
   const googleProvider = new GoogleAuthProvider();
+  const githubProvider = new GithubAuthProvider();
 
   const handleSubmit = (event) => {
     event.preventDefault();
@@ -48,6 +49,16 @@ const Login = () => {
       .catch(error => console.error(error));
   };
 
+  const handleGithubSignIn = () => {
+    githubLogin(githubProvider)
+      .then(result => {
+        const user = result.user;
+        console.log(user);
+        navigate(from, { replace: true });
+      })
+      .catch(error => console.error(error));
+  };
+
   return (
     <div className='my-5'>
       <Form onSubmit={handleSubmit} className='w-50 mx-auto border border-2 rounded'>
@@ -65,10 +76,11 @@ const Login = () => {
           {error}
         </Form.Text>
         <br />
-        <Button className='mt-2  p-2 w-100' variant="primary" type="submit">
+        <Button className='p-2 w-100' variant="primary" type="submit">
           Login
         </Button>
-        <Link onClick={handleGoogleSignIn}><Button className='w-100 my-2'><FaGoogle></FaGoogle> Google Sign</Button></Link>
+        <Link onClick={handleGoogleSignIn}><Button className='w-100 my-2'><FaGoogle></FaGoogle> Google Sign In</Button></Link>
+        <Link onClick={handleGithubSignIn}><Button className='w-100 mb-2'><FaGoogle></FaGoogle> Github Sign In</Button></Link>
         <Form.Text className="text-dark">
           <p className='px-2 pt-1'>New to Here? <Link to='/signup'>Create New Account</Link></p>
         </Form.Text>

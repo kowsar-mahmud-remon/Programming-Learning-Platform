@@ -11,7 +11,7 @@ const LeftSide = () => {
       .then(data => setCourses(data));
   }, []);
   return (
-    <div className='mb-5'>
+    <div className='my-5'>
       <h3 className='mb-3'>All Courses: {courses.length}</h3>
       <div className="">
         {
