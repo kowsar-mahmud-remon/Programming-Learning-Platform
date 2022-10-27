@@ -24,7 +24,7 @@ const CourseDetailsCard = ({ courseDetail }) => {
                 <p>{details}</p>
             }
           </Card.Text>
-          <Button variant="primary">Go somewhere</Button>
+          <Link to={`/courses/checkout/${_id}`}><Button variant="primary">Get premium access</Button></Link>
         </Card.Body>
         <Card.Footer className="d-flex justify-content-between py-3">
           <div className="">Course Price: ${course_price}</div>

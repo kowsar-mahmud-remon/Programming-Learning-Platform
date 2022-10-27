@@ -9,7 +9,7 @@ const Details = () => {
   console.log(courseDetails);
   const { title, course_price, img, rating, details, course_id } = courseDetails;
   return (
-    <div>
+    <div className='mb-5'>
       <Card>
         <Card.Img variant="top" src={img} />
         <Card.Body>

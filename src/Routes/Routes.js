@@ -3,6 +3,7 @@ import Main from "../layout/Main";
 import OtherMain from "../layout/OtherMain";
 import AllCourse from "../Pages/AllCourse";
 import Blog from "../Pages/Blog";
+import Checkout from "../Pages/Checkout";
 import Courses from "../Pages/Courses";
 import Details from "../Pages/Details";
 import ErrorPage from "../Pages/ErrorPage";
@@ -46,6 +47,11 @@ export const routes = createBrowserRouter([
             loader: ({ params }) => fetch(`http://localhost:5000/all-details/${params.id}`),
             element: <Details></Details>
           },
+          {
+            path: '/courses/checkout/:id',
+            loader: ({ params }) => fetch(`http://localhost:5000/all-details/${params.id}`),
+            element: <Checkout></Checkout>
+          }
         ]
       },
       {

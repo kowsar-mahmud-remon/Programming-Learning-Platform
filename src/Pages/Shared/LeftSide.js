@@ -11,8 +11,8 @@ const LeftSide = () => {
       .then(data => setCourses(data));
   }, []);
   return (
-    <div>
-      <h2>All Courses: {courses.length}</h2>
+    <div className='mb-5'>
+      <h3 className='mb-3'>All Courses: {courses.length}</h3>
       <div className="">
         {
           courses.map(course =>

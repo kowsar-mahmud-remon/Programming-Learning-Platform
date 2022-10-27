@@ -8,7 +8,7 @@ const AllCourse = () => {
 
   return (
     <div>
-      <h2>All course: {courseDetails.length}</h2>
+      <h3 className='mb-3'>Single Course: {courseDetails.length}</h3>
       {
         courseDetails.map(courseDetail => <CourseDetailsCard
           key={courseDetail._id}
