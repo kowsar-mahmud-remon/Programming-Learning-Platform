@@ -10,7 +10,7 @@ const Courses = () => {
   console.log(courseDetails);
   return (
     <div>
-      <h2>course details: {courseDetails.length}</h2>
+      <h2>ALL Course Details: {courseDetails.length}</h2>
       <Row>
         {
           courseDetails.map(courseDetail => <CourseDetailsCard key={courseDetail._id}

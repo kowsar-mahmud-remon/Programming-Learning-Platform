@@ -16,7 +16,7 @@ const LeftSide = () => {
       <div className="">
         {
           courses.map(course =>
-            <Link className='text-decoration-none' key={course.id} to={`course/${course.id}`}><Button className='d-block mb-2 fw-bold' variant="outline-success">{course.name}</Button></Link>
+            <Link className='text-decoration-none' key={course.id} to={`course/${course.id}`}><Button className='d-block mb-2 w-75' variant="outline-success">{course.name}</Button></Link>
           )
         }
       </div>

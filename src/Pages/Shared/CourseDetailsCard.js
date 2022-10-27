@@ -14,7 +14,7 @@ const CourseDetailsCard = ({ courseDetail }) => {
       <Card className="mb-5">
         <Card.Header className='text-center'><h4>{name}</h4></Card.Header>
         <Card.Body className='pb-3'>
-          <Card.Img style={{ height: '300px' }} variant="top" src={img} />
+          <Card.Img style={{ height: '250px' }} variant="top" src={img} />
           <Card.Title className='mt-3'>{title}</Card.Title>
           <Card.Text className='pt-2'>
             {

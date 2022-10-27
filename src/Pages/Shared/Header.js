@@ -10,14 +10,14 @@ const Header = () => {
     <div className='mb-4'>
       <Navbar collapseOnSelect expand="lg" bg="dark" variant="dark">
         <Container>
-          <Navbar.Brand><Link to="/">Programming Learning Platform</Link></Navbar.Brand>
+          <Navbar.Brand><Link to="/" className='text-decoration-none text-light fs-4'>Programming Learning Platform</Link></Navbar.Brand>
           <Navbar.Toggle aria-controls="responsive-navbar-nav" />
           <Navbar.Collapse id="responsive-navbar-nav">
             <Nav className="me-auto">
-              <Nav.Link href="#features">Home</Nav.Link>
-              <Nav.Link href="#courses">Courses</Nav.Link>
-              <Nav.Link href="#faq">FAQ</Nav.Link>
-              <Nav.Link href="#blog">Blog</Nav.Link>
+              <Nav.Link><Link to='/home' className='text-decoration-none text-light'>Home</Link></Nav.Link>
+              <Nav.Link><Link to='/courses' className='text-decoration-none text-light'>Courses</Link></Nav.Link>
+              <Nav.Link><Link to='/faq' className='text-decoration-none text-light'>FAQ</Link></Nav.Link>
+              <Nav.Link><Link to='/blog' className='text-decoration-none text-light'>Blog</Link></Nav.Link>
               <NavDropdown title="Dropdown" id="collasible-nav-dropdown">
                 <NavDropdown.Item href="#action/3.1">Action</NavDropdown.Item>
                 <NavDropdown.Item href="#action/3.2">
@@ -31,8 +31,8 @@ const Header = () => {
               </NavDropdown>
             </Nav>
             <Nav>
-              <Nav.Link href="#deets">Login</Nav.Link>
-              <Nav.Link href="#deetss">SignUp</Nav.Link>
+              <Nav.Link><Link to='/login'></Link>Login</Nav.Link>
+              <Nav.Link><Link to='/signup'></Link>SignUp</Nav.Link>
             </Nav>
           </Navbar.Collapse>
         </Container>
