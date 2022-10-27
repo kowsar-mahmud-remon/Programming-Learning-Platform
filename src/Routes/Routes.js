@@ -34,23 +34,23 @@ export const routes = createBrowserRouter([
         children: [
           {
             path: '/courses',
-            loader: () => fetch('http://localhost:5000/details'),
+            loader: () => fetch('https://programming-learning-platform-server-delta.vercel.app/details'),
             element: <Courses></Courses>
           },
           {
             path: '/courses/course/:id',
-            loader: ({ params }) => fetch(`http://localhost:5000/details/${params.id}`),
+            loader: ({ params }) => fetch(`https://programming-learning-platform-server-delta.vercel.app/details/${params.id}`),
             element: <AllCourse></AllCourse>
           },
 
           {
             path: '/courses/details/:id',
-            loader: ({ params }) => fetch(`http://localhost:5000/all-details/${params.id}`),
+            loader: ({ params }) => fetch(`https://programming-learning-platform-server-delta.vercel.app/all-details/${params.id}`),
             element: <Details></Details>
           },
           {
             path: '/courses/checkout/:id',
-            loader: ({ params }) => fetch(`http://localhost:5000/all-details/${params.id}`),
+            loader: ({ params }) => fetch(`https://programming-learning-platform-server-delta.vercel.app/all-details/${params.id}`),
             element: <PrivateRoute><Checkout></Checkout></PrivateRoute>
           }
         ]
