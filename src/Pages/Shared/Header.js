@@ -28,7 +28,7 @@ const Header = () => {
               height="40"
               className="d-inline-block"
             />{' '}</Link>
-            <Link to="/" className='text-decoration-none text-light fs-4'>Programming Learning Platform</Link>
+            <Link to="/" className='text-decoration-none text-light fs-4'>Pro Coder</Link>
           </Navbar.Brand>
           <Navbar.Toggle aria-controls="responsive-navbar-nav" />
           <Navbar.Collapse id="responsive-navbar-nav">
